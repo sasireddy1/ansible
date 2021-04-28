@@ -1,16 +1,16 @@
 ---
-hosts: webservers
-become: yes
-tasks:
- - name: installing apache2
-   apt:
-    name: apache2
-    state: present
- - name: starting apache2 service
-   service:
-    name: apache2
-    state: started
-    enabled: true   
-   copy:
-    src: index.html
-    dest: /var/www/html/index.html
+- hosts: webservers
+  become: yes
+  tasks:
+   - name: installing apache2
+     apt:
+      name: apache2
+      state: present
+   - name: starting apache2 service
+     service:
+      name: apache2
+      state: started
+      enabled: true   
+     copy:
+      src: index.html
+      dest: /var/www/html/index.html
