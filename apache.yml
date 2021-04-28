@@ -1,5 +1,5 @@
 ---
-hosts: 172.31.15.94
+hosts: webservers
 become: yes
 tasks:
  - name: installing apache2
